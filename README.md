@@ -4,7 +4,7 @@
 2. **h2b**: Converts a hexadecimal string on stdin to a binary one on stdout.
 3. **h2d**: Converts a hexadecimal string on stdin to a decimal one on stdout.
 4. **linelint**: Parses program files and outputs any that exceed a set column limit.
-
+5. **eflags**: Parses a binary string, and displays what register flags are set for an x86-64 CPU.
 ### Usage
 
 For the majority of these programs, I simply copy them into `/usr/local/bin` via:
