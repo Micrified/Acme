@@ -46,7 +46,7 @@ const char *inst_cnd[] = {"jo","jno","js","jns","je","jz","jne","jnz","jb",
 
 // All tracked ALU instructions (all arithmetic/bit operations).
 const char *inst_alu[] = {"ror", "rol", "shl", "sal", "shr", "sar", "not", 
-	"and", "or", "xor", "neg", "sub", "add", "idiv", "cmp", NULL};
+	"and", "or", "xor", "neg", "sub", "add", "idiv", "cmp", "test", NULL};
 
 // All tracked multiplication instructions.
 const char *inst_mpy[] = {"imul", NULL};
@@ -79,7 +79,7 @@ const char *getinst () {
 
     // Otherwise read the word in.
     do {
-        word[r++] = c;
+        word[r++] = tolower(c);
     } while (isalpha((c = getchar())) && r < MAX_INST_LEN);
 
     // Set null char.
