@@ -39,8 +39,10 @@
 */
 
 // All tracked conditional instructions.
-const char *inst_cnd[] = {"jz", "jnz", "jg", "jge", "jl", "jle", "jc", "jnc", 
-	NULL};
+const char *inst_cnd[] = {"jo","jno","js","jns","je","jz","jne","jnz","jb",
+	"jbna","jc","jnb","jae","jnc","jbe","jna","ja","jnbe","jl","jnge",
+	"jge","jnl","jle","jng","jg","jnle","jp","jpe", "jnp", "jpo", "jcxz",
+	 "jecxz", NULL};
 
 // All tracked ALU instructions (all arithmetic/bit operations).
 const char *inst_alu[] = {"ror", "rol", "shl", "sal", "shr", "sar", "not", 
@@ -94,7 +96,6 @@ int main (void) {
     const char *w;
 
     while ((w = getinst()) != NULL) {
-		printf("word = %s\n", w);
         count[ALU] += in(w, inst_alu);
         count[MPY] += in(w, inst_mpy);
         count[CND] += in(w, inst_cnd);
