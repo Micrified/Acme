@@ -46,10 +46,12 @@ const char *inst_cnd[] = {"jo","jno","js","jns","je","jz","jne","jnz","jb",
 
 // All tracked ALU instructions (all arithmetic/bit operations).
 const char *inst_alu[] = {"ror", "rol", "shl", "sal", "shr", "sar", "not", 
-	"and", "or", "xor", "neg", "sub", "add", "idiv", "cmp", "test", NULL};
+	"and", "or", "xor", "neg", "sub", "add", "idiv", "cmp", "test", 
+	"pslld", "psllq", "psllw", "psrad", "psraw", "psrld", "psrlq", 
+	"psrlw", "paddq", "paddd", "paddw", NULL};
 
 // All tracked multiplication instructions.
-const char *inst_mpy[] = {"imul", NULL};
+const char *inst_mpy[] = {"imul","pmuludq", NULL};
 
 
 /*
