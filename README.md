@@ -8,6 +8,7 @@
 6. **ia**: Counts subset of Intel Assembly instructions by class (Arithmetic/Multiply/Conditional).
 7. **co**: Outputs the given input surrounded by block comment tags
 8. **ci**: Outputs the given input stripping first two and last two bytes (comment tags) (dumb)
+9. **ban**: Writes a banner with given organization, authors, creation date, and description to stdout.
 ### Usage
 
 For the majority of these programs, I simply copy them into `/usr/local/bin` via:
