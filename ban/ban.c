@@ -65,7 +65,6 @@ void putline (const char *line, int isCentered) {
 
 int main (int argc, const char *argv[]) {
 	char buffer[MAXBUF] = {0};
-	const char *p;
 
 	// Validate input
 	if (argc < 4) {
